@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  webHookUrl: "http://webhook.site/a941323f-71ae-43c3-97e8-1cc64a01ed92",
+  swapiUrl : "https://swapi.co/api/people/"
 };
 
 /*

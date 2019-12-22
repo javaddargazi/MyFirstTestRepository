@@ -3,12 +3,16 @@
 <input type="text" [(ngModel)]="Product"/>
 <!-- <button name="clear" (click)="Clear(title)">clear</button> -->
 <button name="add" (click)="add(Product)">Add</button>
-<button name="SetAdmin" (click)="SetAdmin()">SetAdmin</button>
+<button name="SetAdmin" (click)="SetAdmin(admin)">SetAdmin</button>
 <div *ngIf="admin">
 <div *ngFor="let Product of Products">
     {{Product}}
 </div> 
 </div>
+<hr/>
+<!-- <app-product></app-product> -->
+<app-reactive-product></app-reactive-product>
+<hr/>
 <div *ngIf="admin">
     <app-sub-folder></app-sub-folder>
 </div>

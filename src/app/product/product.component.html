@@ -1,0 +1,26 @@
+<ul>
+  <div *ngFor="let product of products">
+    <li>{{product.name}} -- {{product.category}} -- {{product.price}}</li>
+  </div>
+  <!-- <li style="color:red">{{product2.name}} -- {{product2.category}} -- {{product2.price}}</li> -->
+</ul>
+<hr />
+<form #heroForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" id="name" [(ngModel)]="product.name" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="category" >Category</label>
+          <input type="text" class="form-control" name="category"  id="category" [(ngModel)]="product.category" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="price" >Price</label>
+          <input type="number" class="form-control" name="price" id="name" [(ngModel)]="product.price" required>
+        </div>
+      
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="addProduct(Form)">Submit</button>
+      
+      </form>
